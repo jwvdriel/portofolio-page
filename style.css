@@ -1,0 +1,168 @@
+/* prevents padding extra height or widht to page
+disabling scrollbar */
+/* main styles */
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: 'Rubik', sans-serif;
+}
+
+/* nav styles */
+.nav-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 18px;
+}
+
+.link-left {
+	display: flex;
+}
+
+.spacing-links-left,
+.logo-image {
+	padding-right: 15px;
+}
+
+.link-left,
+a {
+	text-transform: uppercase;
+	transition: border-bottom 0.5s;
+	border-bottom: 1px solid transparent;
+	text-decoration: none;
+	color: #8f8f8f;
+	align-items: center;
+}
+
+.link-right {
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-weight: normal;
+}
+
+a:hover {
+	border-bottom: 1px solid black;
+}
+
+/* portofolio styles */
+
+i {
+	color: #fff;
+}
+
+.portofolio-items-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portofolio-item-wrapper {
+	position: relative;
+}
+
+.portfolio-img-background {
+	height: 350px;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+	position: absolute;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	text-align: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.logo-wrapper img {
+	width: 50%;
+	margin-bottom: 20px;
+}
+
+.subtitle {
+	margin-top: 10px;
+}
+
+.img-text-wrapper .subtitle {
+	transition: 1s;
+	font-weight: 600;
+	color: transparent;
+}
+
+.img-text-wrapper:hover .subtitle {
+	font-weight: 600;
+	color: lightseagreen;
+}
+
+/* creates a dark filter */
+.img-darken {
+	transition: 0.5s;
+	filter: brightness(10%);
+}
+
+/* about styles */
+.about-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.two-column-wrapper {
+	text-align: center;
+	position: relative;
+	top: 0;
+}
+
+.portofolio-text-display {
+	padding: 20px;
+}
+
+.header-text {
+	color: lightseagreen;
+}
+
+/* queries */
+@media screen and (max-width: 600px) {
+	.portofolio-items-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.img-text-wrapper {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.portfolio-img-background {
+		height: 200px;
+	}
+
+	i {
+		font-size: 5rem !important;
+	}
+
+	.subtitle {
+		font-size: 13px;
+		margin-top: 10px;
+	}
+
+	h3 {
+		font-size: 15px;
+	}
+
+	.nav-wrapper {
+		padding: 18px 10px;
+	}
+}
